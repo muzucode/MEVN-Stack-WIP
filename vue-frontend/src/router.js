@@ -8,9 +8,23 @@ export default new Router({
   routes: [
     {
       path: "/signup",
-      alias: "/signup",
       name: "signup",
       component: () => import("./components/SignUp")
+    },
+    {
+      path: "/",
+      name: "home",
+      component: () => import("./components/Home")
+    },
+    {
+      path: "/boards/create",
+      name: "create-board",
+      component: () => import("./components/boards/Create")
+    },
+    {
+      path: "/boards/modify",
+      name: "modify-board",
+      component: () => import("./components/boards/Modify")
     }
   ]
 });

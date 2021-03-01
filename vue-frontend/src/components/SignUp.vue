@@ -19,6 +19,7 @@ and passed on to the database through the routes-->
         <label for="password">Password</label>
         <input
           class="form-control"
+          type="password"
           id="password"
           required
           v-model="user.password"
