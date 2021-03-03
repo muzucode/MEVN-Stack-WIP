@@ -6,7 +6,7 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 
-db.users = require("./user.model.js")(mongoose)
+db.frames = require("./frame.model.js")(mongoose)
 
 //Export database object with our schemas and URL
 module.exports = db;

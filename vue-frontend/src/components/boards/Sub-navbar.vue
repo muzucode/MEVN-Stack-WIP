@@ -10,7 +10,7 @@
             <b-dropdown-item 
               v-for="option in item.options" 
               :key="option.id"
-              @click="option.ev(option.name, option.setup)"
+              @click="option.ev(option.name)"
             >
               {{option.name}}
             </b-dropdown-item>
@@ -19,7 +19,7 @@
           v-for="item in tabs.static" 
           :key="item.id"
         >
-          {{item}}
+          {{item.title}}
         </b-nav-item>
       </b-navbar-nav>
     </b-collapse>

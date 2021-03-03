@@ -6,7 +6,7 @@ const axios = require('axios');
 export default axios.create({
     //The URL used and prepended to make server side requests
     //Within each set of routes on backend, there is app.use '/api/XYZ'
-  baseURL: "http://localhost:8080/api",
+  baseURL: "http://localhost:8050/api",
   headers: {
     "Content-type": "application/json"
   }

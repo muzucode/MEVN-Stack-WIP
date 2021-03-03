@@ -4,9 +4,10 @@ const cors = require("cors");
 
 const app = express();
 //Configures the Access-Control-Allow-Origin CORS header
-//Allow requests to this API from the front-end server, 8081
+//Allow requests to this API from the front-end server, 8100
+//This is equal to the front end server.
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:8100"
 };
 app.use(cors(corsOptions));
 // parse requests of content-type - application/json
@@ -41,10 +42,11 @@ app.get("/", (req, res) => {
 });
 
 //Sets routes for tutorial
-require("./app/routes/user.routes")(app);
+require("./app/routes/frame.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+// This links up with HTTP-common on frontend to form a backend server listener
+const PORT = process.env.PORT || 8050;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
