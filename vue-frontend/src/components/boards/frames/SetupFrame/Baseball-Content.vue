@@ -140,6 +140,8 @@ export default {
           console.log(e);
         });
     },
+    //Emits 'discard' event which is accessed with @discard in the parent component
+    //After accessing that event with @discard, a method is called to perform a func.
     emitDiscard(){
       this.$emit('discard');
     }
