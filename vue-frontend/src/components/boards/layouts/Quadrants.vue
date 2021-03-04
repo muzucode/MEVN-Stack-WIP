@@ -17,6 +17,9 @@
                 </div>
               </div>
             </div>
+            <div class="fcontent">
+
+            </div>
           </b-container>
 
 
@@ -41,6 +44,13 @@
 </template>
 
 <style>
+.fcontent{
+  border:solid 5px red;
+  display:flex;
+  flex-flow: column;
+  height:85%;
+
+}
 .frow{
   height:100%;
   display:flex;
@@ -51,9 +61,12 @@
   border-right: solid 2px #b9c4cf;
   display:flex;
   flex-flow: row;
-  padding:15px 10px 10px 10px;
+  padding:0px 10px 0px 10px;
   background-color: rgb(36, 39, 70);
   font-weight: bold;
+  height:100%;
+  font-size:1vw;
+  align-items: center;
 }
 .ftab:hover{
   background-color: rgb(64, 69, 124);
@@ -63,7 +76,6 @@
   border-bottom:solid 5px #b9c4cf;
   height:15%;
   color:white;
-  min-height:30px;
   align-items: left;
 }
 #q1{
@@ -90,6 +102,7 @@
 .quadrant{
   border: 5px solid #b9c4cf;
   padding:0px;
+  contain:content;
 }
 #quadrant-spacer{
   width:40px;
