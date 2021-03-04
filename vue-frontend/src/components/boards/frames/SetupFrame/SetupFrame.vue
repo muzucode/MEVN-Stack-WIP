@@ -42,7 +42,7 @@
   border:solid 0px red;
 }
 #setup-frame{
-  border: solid 5px #2c3e50;
+  border: solid 2px #999999;
   position: fixed;
   width:50%;
   left:25%;

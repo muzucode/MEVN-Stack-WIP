@@ -54,7 +54,7 @@
       <b-button-group id="btn-grp">
           <b-button id="btn-grp-btn" variant="warning">Draft</b-button>
           <b-button @click="saveFrame" id="btn-grp-btn" variant="success">Add</b-button>
-          <b-button id="btn-grp-btn" variant="danger">Discard</b-button>
+          <b-button @click="emitDiscard" id="btn-grp-btn" variant="danger">Discard</b-button>
       </b-button-group>
     </div>
 
@@ -139,6 +139,9 @@ export default {
         .catch(e => {
           console.log(e);
         });
+    },
+    emitDiscard(){
+      this.$emit('discard');
     }
   }
 }

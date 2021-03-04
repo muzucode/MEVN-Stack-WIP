@@ -26,5 +26,16 @@ export default new Router({
       name: "modify-board",
       component: () => import("./components/boards/Modify")
     }
+    ,
+    {
+      path: "/boards/explore",
+      name: "explore-boards",
+      component: () => import("./components/boards/Explore")
+    },
+    {
+      path: "/boards/test",
+      name: "test-board",
+      component: () => import("./components/boards/test")
+    },
   ]
 });

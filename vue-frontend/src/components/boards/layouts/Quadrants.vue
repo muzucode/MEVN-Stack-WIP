@@ -24,15 +24,7 @@
 <style>
 
 #boxy{
-  border: 5px solid red;
-}
-
-#main-container{
-  border: 0px solid green;
-  display:flex;
-  flex-flow:column;
-  flex:1;
-  padding-top:50px;
+  border: 5px solid rgb(199, 96, 96);
 }
 #halves-container{
   display:flex;
@@ -50,8 +42,7 @@
   
 }
 #quadrant{
-  border: 5px solid #2c3e50;;
-  border-radius:30px;
+  border: 5px solid #b9c4cf;
 }
 #quadrant-spacer{
   width:40px;
@@ -65,14 +56,7 @@
   width:100%;
   height:40px;
 }
-#footer{
-  display:none;
-  position:fixed;
-  bottom:0px;
-  width:100%;
-  height:50px;
-  background-color: #2c3e50;
-}
+
 </style>
 
 <script>
@@ -81,7 +65,14 @@ export default {
   name: "quadrants-layout",
   data() {
     return{
-      halvesHeight: '38vh',      
+      halvesHeight: '38vh',
+      // halvesContainer: {
+      //     display:'flex',
+      //     flexFlow:'column',
+      //     border: 'solid orange 0px',
+      //     width: '100%'
+      // },
+            
     }
   },  
 };

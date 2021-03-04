@@ -7,18 +7,26 @@
     <b-container fluid id="main-container">
       <div class="row">
         <setup-frame v-if="!isHidden" :frametitle="frametitle">
-          <baseball-content @discard="discardFrame" v-if="frametitle=='Baseball'"></baseball-content>
+          <baseball-content v-if="frametitle=='Baseball'"></baseball-content>
           <finance-content v-if="frametitle=='Finance'"></finance-content>
         </setup-frame>
         <quadrants></quadrants>
       </div>
     </b-container>
+  
+
+  <div id="footer"></div>
 </div>
 
 
 </template>
 
 <style>
+
+
+body{
+  background-color:#2c3e50;
+}
 #main-container{
   border: 0px solid green;
   display:flex;
@@ -26,12 +34,6 @@
   flex:1;
   padding-top:50px;
 }
-
-body{
-  background-color:#2c3e50;
-}
-
-
 </style>
 
 <script>
@@ -45,7 +47,7 @@ import financeContent from './frames/SetupFrame/Finance-Content.vue'
 
 
 export default {
-  name: "create-board",
+  name: "test-board",
   data() {
     return{
       title: 'Create board',
@@ -84,9 +86,6 @@ export default {
       this.frametitle=frameName;
       
       // this.options=content.setup.section1;
-    },
-    discardFrame: function(){
-      this.isHidden=true;
     }
   },
   components:{

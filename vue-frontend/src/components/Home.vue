@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-      
+  <div id="home-page">
+      <img id="landing" src="../assets/homepage3.jpg"/>
   </div>
 </template>
 
@@ -14,3 +14,11 @@ export default {
 
 };
 </script>
+
+<style>
+#landing{
+max-width: 100%;
+max-height:100%;
+}
+
+</style>
