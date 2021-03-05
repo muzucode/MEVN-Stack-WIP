@@ -249,10 +249,6 @@
   color:black;
   align-items: left;
 }
-#q1{
-  border:solid 3px #000000;
-  background-color: rgb(141, 141, 141) ;
-}
 #boxy{
   border: 5px solid rgb(199, 96, 96);
 }
@@ -272,8 +268,9 @@
   
 }
 .quadrant{
-  border: 5px solid #b9c4cf;
+  border: 3px solid #000000;
   padding:0px;
+  background-color: rgb(141, 141, 141) ;
 }
 #quadrant-spacer{
   width:40px;
