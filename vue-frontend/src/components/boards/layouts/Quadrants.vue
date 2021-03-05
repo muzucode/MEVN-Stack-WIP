@@ -17,9 +17,43 @@
                 </div>
               </div>
             </div>
-            <div class="fcontent">
-
+            <div class="fcontent-container">
+              <div class="fcontent-1">
+              <div class="current-date">
+                March 4, 2021
+              </div>
+              <div class="current-game">
+                <img class="team-img" src="../../../assets/baseball-logos/phillies.png"/>
+                <div>vs</div>
+                <img class="team-img" src="../../../assets/baseball-logos//dodgers.png"/>
+              </div>
+              <div class="boxscore">
+                <table>
+                  <tr id="inning">
+                    <td class="row-label">Inning</td>
+                    <td v-for="index in 9" :key="index">{{index}}</td>
+                  </tr>
+                  <tr id="away">
+                    <td class="row-label">Away</td>
+                    <td v-for="index in 9" :key="index"></td>
+                  </tr>
+                  <tr id="home">
+                    <td class="row-label">Home</td>
+                    <td v-for="index in 9" :key="index"></td>
+                  </tr>
+                  <tr id="hits">
+                    <td class="row-label">Hits</td>
+                    <td v-for="index in 9" :key="index"></td>
+                  </tr>
+                </table>
+              </div>
             </div>
+              <div class="fcontent-2">
+              
+              </div>
+            </div>
+            
+            
           </b-container>
 
 
@@ -44,12 +78,72 @@
 </template>
 
 <style>
-.fcontent{
+.row-label{
+  width:4vw;
+}
+td{
+  font-size:.7vw;
+}
+table{
+  width:100%;
+  color:black;
+}
+table > tr > td{
+  border: solid 1px black;
+}
+.boxscore{
+  display:flex;
+  overflow:auto;
+  border:solid 5px blue;
+}
+.team-img{
+  height:10vh;
+}
+.current-game > div {
+  font-size: 2.5em;
+  margin: 0px 5vw 0px 5vw;
+  color:black;
+  font-weight: bold;
+}
+.current-game{
+  border: solid 5px greenyellow;
+  color:white;
+  font-size:1vw;
+  display:flex;
+  flex-flow:row;
+  width:100%;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+.current-date{
+  border: solid 5px rgb(255, 184, 104);
+  color:black;
+  font-size:1vw;
+  padding:5px;
+}
+
+.fcontent-1{
   border:solid 5px red;
   display:flex;
   flex-flow: column;
+  height:100%;
+  background-color: white;
+}
+.fcontent-2{
+  border:solid 5px rgb(1, 214, 221);
+  display:flex;
+  flex-flow: column;
+  width:100%;
+  height:100%;
+  background-color: white;
+}
+.fcontent-container{
+  border:solid 5px red;
+  display:flex;
+  flex-flow: row;
   height:85%;
-
+  background-color: white;
 }
 .frow{
   height:100%;
@@ -102,7 +196,6 @@
 .quadrant{
   border: 5px solid #b9c4cf;
   padding:0px;
-  contain:content;
 }
 #quadrant-spacer{
   width:40px;
