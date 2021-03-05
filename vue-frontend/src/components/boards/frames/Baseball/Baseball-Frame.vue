@@ -1,10 +1,6 @@
 <template>
 
-      <div id="halves-container">
-        <div id="top-half" class="halves" v-bind:style="{height: halvesHeight}">
-          <b-container id="quadrant-spacer-lg"></b-container>
-          <b-container id ="q1" class="quadrant">
-            <div style="height:100%">
+<div style="height:100%">
               <div class="fcontainer">
                 <div class="frow">
                   <div class="ftab">
@@ -24,9 +20,9 @@
                     March 4, 2021
                   </div>
                   <div class="current-game">
-                    <img class="team-img" src="../../../assets/baseball-logos/phillies.png"/>
+                    <img class="team-img" src="../../../../assets/baseball-logos/phillies.png"/>
                     <div>vs</div>
-                    <img class="team-img" src="../../../assets/baseball-logos//dodgers.png"/>
+                    <img class="team-img" src="../../../../assets/baseball-logos/dodgers.png"/>
                   </div>
                   <div class="boxscore">
                   <table>
@@ -84,46 +80,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-            
-          </b-container>
-
-
-
-
-
-          <b-container id="quadrant-spacer"></b-container>
-
-          <!-- Q2  -->
-          <b-container class="quadrant">
-            <baseball-frame></baseball-frame>
-          </b-container>
-
-          <b-container id="quadrant-spacer-lg"></b-container>
-        </div>
-
-
-
-        
-        <b-container id="halves-spacer"></b-container>
-
-
-        <div id="bottom-half" class="halves" v-bind:style="{height: halvesHeight}">
-
-          <!-- Q3  -->
-          <b-container id="quadrant-spacer-lg"></b-container>
-          <b-container class="quadrant">
-            <baseball-frame></baseball-frame>
-          </b-container>
-
-          <!-- Q4  -->
-          <b-container id="quadrant-spacer"></b-container>
-          <b-container class="quadrant">
-            <baseball-frame></baseball-frame>
-          </b-container>
-          <b-container id="quadrant-spacer-lg"></b-container>
-        </div>
-      </div>
+</div>
 
 
 </template>
@@ -292,9 +249,9 @@
 </style>
 
 <script>
-import baseballFrame from '../frames/Baseball/Baseball-Frame.vue'
+
 export default {
-  name: "quadrants-layout",
+  name: "baseball-frame",
   data() {
     return{
       halvesHeight: '38vh',
@@ -306,9 +263,7 @@ export default {
       // },
             
     }
-  },
-  components: {
-    baseballFrame
-  }  
+  },  
 };
+
 </script>
