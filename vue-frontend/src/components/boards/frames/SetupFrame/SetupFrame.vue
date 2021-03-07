@@ -78,6 +78,8 @@
 </style>
 
 <script>
+
+
 export default {
   name: "setup-frame",
   data() {

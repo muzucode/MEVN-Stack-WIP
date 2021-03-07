@@ -14,12 +14,12 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: () => import("./components/Home")
+      component: () => import("./views/Home")
     },
     {
       path: "/boards/create",
       name: "create-board",
-      component: () => import("./components/boards/Create")
+      component: () => import("./views/boards/Create")
     },
     {
       path: "/boards/modify",
@@ -36,6 +36,6 @@ export default new Router({
       path: "/boards/test",
       name: "test-board",
       component: () => import("./components/boards/test")
-    },
+    }
   ]
 });

@@ -6,11 +6,11 @@
 
     <b-container fluid id="main-container">
       <div class="row">
+        <quadrants></quadrants>
         <setup-frame v-if="!isHidden" :frametitle="frametitle">
           <baseball-content @discard="discardFrame" v-if="frametitle=='Baseball'"></baseball-content>
           <finance-content v-if="frametitle=='Finance'"></finance-content>
         </setup-frame>
-        <quadrants></quadrants>
       </div>
     </b-container>
 </div>
@@ -28,19 +28,19 @@
 }
 
 body{
-  background-color:#2c3e50;
+  background-color:#dddddd;
 }
 
 
 </style>
 
 <script>
-import subNavbar from './Sub-navbar.vue';
-import quadrants from './layouts/Quadrants.vue';
+import subNavbar from '../../components/boards/Sub-navbar.vue';
+import quadrants from '../../components/boards/layouts/Quadrants.vue';
 
-import setupFrame from './frames/SetupFrame/SetupFrame.vue';
-import baseballContent from './frames/SetupFrame/Baseball-Content.vue'
-import financeContent from './frames/SetupFrame/Finance-Content.vue'
+import setupFrame from '../../components/boards/frames/SetupFrame/SetupFrame.vue';
+import baseballContent from '../../components/boards/frames/SetupFrame/Baseball-Content.vue'
+import financeContent from '../../components/boards/frames/SetupFrame/Finance-Content.vue'
 
 
 
