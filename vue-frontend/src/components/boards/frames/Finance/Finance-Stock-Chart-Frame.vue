@@ -24,11 +24,15 @@
 
         <div class="links-section">
           <div id="itemlinks">
-            <div v-for="link in stockLinks" :key="link.id" class="link-item">
+            <div v-for="link in stockLinks" :key="link.id" class="link-item_left">
               {{link.title}}
             </div>
           </div>
-          <div id="itemlinks-options"></div>
+          <div id="itemlinks-options">
+            <div v-for="option in 6" :key="option.id" class="link-item_right">
+              - Option # {{option}}
+            </div>
+          </div>
         </div>
         
       </div>
@@ -68,11 +72,48 @@
 
 
 <style>
+#itemlinks-options{
+  display:flex;
+  flex-flow:column;
+  flex-grow: 1;
+  border-top: solid 2px black;
+
+  font-size:70%;
+  background-color: rgb(255, 255, 255);
+}
+.link-item_left:hover{
+  background-color: rgb(255, 255, 255);
+  border-right:none;
+  cursor:pointer;
+}
+.link-item_left{
+  border-top:solid 2px rgb(0, 0, 0);
+  border-right:solid 2px rgb(0, 0, 0);
+  display: flex;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-top:5px;
+  color:black;
+  background-color: rgb(204, 200, 255);
+}
+.link-item_right{
+  border-top:solid 0px rgb(0, 0, 0);
+  border-right:solid 0px rgb(0, 0, 0);
+  display: flex;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-top:5px;
+  color: black;
+}
+.link-items{
+  border:0px;
+}
 .links-section{
   height:100%;
   display:flex;
   flex-flow:row;
   border-top:0px solid black;
+  
 }
 #itemlinks{
   width:40%;
@@ -80,11 +121,7 @@
   display:flex;
   flex-flow:column;
 }
-#itemlinks-options{
-  display:flex;
-  flex-grow: 1;
-  border-top: solid 2px black;
-}
+
 #overview-stat-number{
   font-size:1.5em;
 }
@@ -112,15 +149,6 @@
   padding-left:20px;
   padding-bottom:20px;
   margin-top:10px;
-}
-.link-item{
-  border-top:solid 2px rgb(0, 0, 0);
-  border-right:solid 2px rgb(0, 0, 0);
-  display: flex;
-  flex-grow: 1;
-  padding-left: 20px;
-  padding-top:5px;
-  color:rgb(112, 112, 112);
 }
 #stocktitle{
   text-align: left;
@@ -205,12 +233,11 @@ export default {
     return{
       stockStats:{
           a: {label: 'Price', number:76},
-          b: {label: 'EPS', number:48},
-          c: {label: 'Volume', number:96},
-          d: {label: 'Price', number:34},
-          e: {label: 'EPS', number:4238},
-          f: {label: 'Price', number:14},
-          g: {label: 'EPS', number:64}
+          b: {label: 'Volume', number:48},
+          c: {label: 'EPS', number:96},
+          d: {label: 'Open', number:34},
+          e: {label: 'Close', number:4238},
+          f: {label: '% Change', number:14}
       },
       stockLinks:{
           a: {title: 'Charts (Finviz)', outlet: 'Yahoo Finance'},
