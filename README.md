@@ -3,10 +3,8 @@ A dashboard that will be able to do everything for anyone.  Full stack setup.  B
 
 In order to run the code:
 
-1.) Open two terminals
-
-2.) Inside the /Backend directory, run: "node server.js" to launch the backend server.
+1.) Open a terminal instance
 
 3.) Inside the /vue-frontend directory, run: "npm run serve" to launch the frontend server.
 
-4.) Navigate to localhost port 8100 to view the app.
+3.) Navigate to localhost port 8100 to view the app.
