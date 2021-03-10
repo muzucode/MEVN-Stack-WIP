@@ -9,7 +9,7 @@
         <quadrants></quadrants>
         <setup-frame v-if="!isHidden" :frametitle="frametitle">
           <baseball-content @discard="discardFrame" v-if="frametitle=='Baseball'"></baseball-content>
-          <finance-content v-if="frametitle=='Finance'"></finance-content>
+          <finance-content @discard="discardFrame" v-if="frametitle=='Finance'"></finance-content>
         </setup-frame>
       </div>
     </b-container>

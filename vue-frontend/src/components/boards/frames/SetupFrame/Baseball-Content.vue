@@ -46,7 +46,7 @@
     <div class="section" id="footer-s1">
       <h2 id="section-title">Add to panel(s):</h2>
       <b-form-group class="leftalign">
-        <b-form-checkbox-group id="checkbox" :options="s4options" v-model="panels">
+        <b-form-checkbox-group id="checkbox" :options="footerOptions" v-model="panels">
         </b-form-checkbox-group>
       </b-form-group>
     </div>
@@ -110,7 +110,7 @@ export default {
         { text: 'News', value: 'News' },
         { text: 'Odds', value: 'Odds' }
       ],
-      s4options: [
+      footerOptions: [
         { text: '1', value: 'first' },
         { text: '2', value: 'second' },
         { text: '3', value: 'third' },
