@@ -24,13 +24,13 @@
 
         <div class="links-section">
           <div id="itemlinks">
-            <div v-for="link in stockLinks" :key="link.id" class="link-item_left">
+            <div @click="getResults(link.results)" v-for="link in stockLinks" :key="link.id" class="link-item_left">
               {{link.title}}
             </div>
           </div>
-          <div id="itemlinks-options">
-            <div v-for="option in 6" :key="option.id" class="link-item_right">
-              - Option # {{option}}
+          <div id="itemlinks-results">
+            <div v-for="result in linkSelectedResults" :key="result.id" class="link-item_right">
+              {{result}}
             </div>
           </div>
         </div>
@@ -72,13 +72,12 @@
 
 
 <style>
-#itemlinks-options{
+#itemlinks-results{
   display:flex;
   flex-flow:column;
   flex-grow: 1;
   border-top: solid 2px black;
-
-  font-size:70%;
+  font-size:100%;
   background-color: rgb(255, 255, 255);
 }
 .link-item_left:hover{
@@ -90,11 +89,13 @@
   border-top:solid 2px rgb(0, 0, 0);
   border-right:solid 2px rgb(0, 0, 0);
   display: flex;
+  flex-flow:row;
   flex-grow: 1;
   padding-left: 20px;
   padding-top:5px;
   color:black;
   background-color: rgb(204, 200, 255);
+  align-items:center;
 }
 .link-item_right{
   border-top:solid 0px rgb(0, 0, 0);
@@ -104,6 +105,7 @@
   padding-left: 20px;
   padding-top:5px;
   color: black;
+  align-items:center;
 }
 .link-items{
   border:0px;
@@ -231,6 +233,7 @@ export default {
   name: "finance-stock-chart-frame",
   data() {
     return{
+      linkSelectedResults: {},
       stockStats:{
           a: {label: 'Price', number:76},
           b: {label: 'Volume', number:48},
@@ -240,16 +243,21 @@ export default {
           f: {label: '% Change', number:14}
       },
       stockLinks:{
-          a: {title: 'Charts (Finviz)', outlet: 'Yahoo Finance'},
-          b: {title: 'News', outlet: 'Yahoo Finance'},
-          c: {title: 'Investor Analysis', outlet: 'Yahoo Finance'},
-          d: {title: 'Company Bio', outlet: 'Yahoo Finance'}
+          a: {title: 'Charts (Finviz)', results: {a: 'Daily', b: 'Monthly', c: 'Yearly', d:'All-time'}},
+          b: {title: 'News', results: {a: 'Yahoo Finance', b: 'The Motley Fool', c: 'MarketWatch', d:'Finviz'}},
+          c: {title: 'Investor Analysis', results: {a: 'Yahoo Finance', b: 'The Motley Fool', c: 'MarketWatch', d:'Finviz'}},
+          d: {title: 'Misc', results: {a: 'YouTube', b: 'Wikipedia', c: 'Twitter', d:'/r/Investing'}}
       },
       stockOverview:{
           a: {label: 'Price', number:'$673.60'},
           b: {label: 'EPS', number:'$5.32'},
           c: {label: 'Volume', number:'96,000,000'},
       },
+    }
+  },
+  methods: {
+    getResults: function(results){
+      this.linkSelectedResults = results;
     }
   }
 };
