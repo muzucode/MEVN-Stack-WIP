@@ -38,6 +38,6 @@ export default {
       halvesHeight: '40vh'
     }
   },
-  props: ['tabs','title','isHidden']
+  props: ['tabs','title']
 }
 </script>
