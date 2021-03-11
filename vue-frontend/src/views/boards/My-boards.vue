@@ -35,11 +35,11 @@
 <style>
 
 .board-thumbnail{
-display:flex;
-flex-flow:column;
-align-items: center;
-height:100%;
-width:100%;
+	display:flex;
+	flex-flow:column;
+	align-items: center;
+	height:100%;
+	width:100%;
 }
 .board-options > div{
 	height:100%;
