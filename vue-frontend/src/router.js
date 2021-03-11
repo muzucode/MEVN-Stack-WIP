@@ -36,6 +36,11 @@ export default new Router({
       path: "/boards/test",
       name: "test-board",
       component: () => import("./components/boards/test")
-    }
+    },
+    {
+      path: "/boards/my-boards",
+      name: "my-boards",
+      component: () => import("./views/boards/My-boards")
+    },
   ]
 });

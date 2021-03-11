@@ -12,6 +12,7 @@
               <b-dropdown-item href="/boards/modify">Modify board</b-dropdown-item>
               <b-dropdown-item href="/boards/delete">Delete board</b-dropdown-item>
               <b-dropdown-item href="/boards/explore">Explore boards</b-dropdown-item>
+              <b-dropdown-item href="/boards/my-boards">My boards</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       
