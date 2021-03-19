@@ -87,6 +87,7 @@ export default {
         { text: '2', value: 'second' },
         { text: '3', value: 'third' },
         { text: '4', value: 'fourth' }
+        
       ]
     }
     
